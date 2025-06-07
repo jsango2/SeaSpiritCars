@@ -12,9 +12,14 @@ export const WrapHeader = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media only screen and (max-width: 430px) {
-    /* height: auto;
-    padding: 0px 0 60px 0; */
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+
+    padding: 10px;
+  }
+  @media only screen and (max-width: 385px) {
+    padding: 0;
+    overflow: hidden;
   }
 `;
 
@@ -30,7 +35,11 @@ export const Container = styled.div`
     width: 100%;
     height: auto;
   }
-  @media only screen and (max-width: 574px) {
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+    max-width: 380px;
+    align-items: flex-start;
+    min-width: 365px;
   }
 `;
 
@@ -44,9 +53,24 @@ export const WrapSingleData = styled.div`
   align-items: center;
   margin: 0 20px;
   flex-shrink: 0;
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 1210px) {
+    margin: 0 10px;
   }
-  @media only screen and (max-width: 574px) {
+  @media only screen and (max-width: 1150px) {
+    svg {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 1050px) {
+    svg {
+      display: block;
+    }
+    margin: 8px 20px;
+  }
+  @media only screen and (max-width: 360px) {
+    svg {
+      display: none;
+    }
   }
 `;
 export const WrapKey = styled.div`
@@ -71,6 +95,9 @@ export const WrapValue = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  a {
+    color: white;
+  }
   @media only screen and (max-width: 770px) {
   }
   @media only screen and (max-width: 574px) {

@@ -17,15 +17,20 @@ import Image from "next/image.js";
 import HomePage from "./DropdownSection/main.js";
 function PodrucjeRadaSection() {
   const size = useWindowSize();
-  // const { ref, inView, entry } = useInView({
-
-  //   threshold: 0,
-  //   triggerOnce: true,
-  // });
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    triggerOnce: false,
+  });
   return (
-    <WrapAll>
+    <WrapAll ref={ref}>
       <Container>
-        <Title>Područja rada</Title>
+        <Title
+          className={`contentFade ${
+            inView ? "contentFadeIn" : "contentFadeOut"
+          }`}
+        >
+          Područja rada
+        </Title>
         <Divider />
         <Text>
           Odvjetnik Miljak ima široko iskustvo u pružanju pravnih usluga

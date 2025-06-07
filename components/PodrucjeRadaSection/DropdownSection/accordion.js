@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 
 // Overall container for the two columns
@@ -14,8 +15,12 @@ const AccordionColumnsContainer = styled.div`
   height: 600px;
   /* NOTE: Removed background-color from here. It should be applied to the body or a higher-level wrapper */
   /* color: #e2e8f0; // Keep text color here, as it's for the content */
+  @media (max-width: 1050px) {
+    height: auto;
+    padding: 0 0px; /* Horizontal padding for responsiveness */
+  }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1050px) {
     flex-direction: row; /* Two columns on larger screens */
     justify-content: center; /* Center columns if less than max-width */
     align-items: flex-start; /* Align columns to the top */
@@ -70,6 +75,14 @@ const AccordionTitle = styled.h3`
   font-size: 1.25em; /* Larger font size */
   font-weight: 600; /* Bolder text */
   color: #e2e8f0; /* Light text color */
+  @media only screen and (max-width: 850px) {
+    padding-top: 14px;
+    font-size: 1em; /* Larger font size */
+  }
+  @media only screen and (max-width: 450px) {
+    padding-top: 0px;
+    font-size: 1em; /* Larger font size */
+  }
 `;
 
 // Icon for expanding/collapsing the accordion
@@ -112,7 +125,14 @@ const AccordionContent = styled.div`
  * @param {function} onClick - Callback to inform the parent when this item is clicked.
  * @param {string | number} itemKey - Unique identifier for this item, used by the parent.
  */
-const AccordionItem = ({ header, children, isActive, onClick, itemKey }) => {
+const AccordionItem = ({
+  header,
+  children,
+  isActive,
+  onClick,
+  itemKey,
+  inView,
+}) => {
   const contentRef = useRef(null);
   const [contentHeight, setContentHeight] = useState(0);
 
@@ -137,7 +157,9 @@ const AccordionItem = ({ header, children, isActive, onClick, itemKey }) => {
   };
 
   return (
-    <AccordionItemWrapper>
+    <AccordionItemWrapper
+      className={`contentFade ${inView ? "contentFadeIn" : "contentFadeOut"}`}
+    >
       <AccordionHeader onClick={handleClick} $isOpen={isActive}>
         <AccordionTitle>{header}</AccordionTitle>
         <AccordionIcon $isOpen={isActive}>&#x2303;</AccordionIcon>

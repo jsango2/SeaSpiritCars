@@ -83,7 +83,9 @@ export const Title = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 1050px) {
+    font-size: 26px;
+    text-align: center;
   }
   @media only screen and (max-width: 574px) {
   }
@@ -105,7 +107,9 @@ export const WrapTimeline = styled.div`
   width: 100%;
   justify-content: space-between;
   margin-top: 50px;
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+    align-items: center;
   }
   @media only screen and (max-width: 574px) {
   }
@@ -121,9 +125,12 @@ export const SingleBlock = styled.div`
   transition: all 0.7s ease-out;
   opacity: ${(props) => (props.inView ? "1" : "0")};
   transition-delay: ${(props) => props.animationDelay};
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 1050px) {
+    flex-direction: row-reverse;
+    width: 360px;
   }
-  @media only screen and (max-width: 574px) {
+  @media only screen and (max-width: 390px) {
+    width: 333px;
   }
 `;
 export const Gradient = styled.div`
@@ -136,23 +143,36 @@ export const Gradient = styled.div`
   background: #000;
   filter: blur(31.873483657836914px);
   top: 100px;
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 1050px) {
+    width: 50px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-53px);
   }
-  @media only screen and (max-width: 574px) {
+  @media only screen and (max-width: 550px) {
+    transition: all 0.7s ease-out;
+    opacity: ${(props) => (props.inView ? "0.38" : "0")};
   }
 `;
 export const Line = styled.div`
   position: absolute;
-  width: 100%;
+
   height: 0.5px;
   background-color: #d4cc6c;
   top: 87px;
   transition: all 2.7s ease-out;
 
   width: ${(props) => (props.inView ? "100%" : "0%")};
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 1050px) {
+    width: 0.5px;
+    top: 10px;
+    left: 50%;
+    transform: translate(-53px);
+    height: ${(props) => (props.inView ? "365px" : "0")};
   }
-  @media only screen and (max-width: 574px) {
+  @media only screen and (max-width: 390px) {
+    transform: translate(-49px);
   }
 `;
 export const Text = styled.div`
@@ -169,9 +189,15 @@ export const Text = styled.div`
   justify-content: center;
   align-items: flex-end;
   margin-bottom: 20px;
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 1050px) {
+    margin-bottom: 0px;
+    align-items: center;
+    width: 208px;
+    text-align: left;
+    justify-content: flex-start;
   }
-  @media only screen and (max-width: 574px) {
+  @media only screen and (max-width: 390px) {
+    width: 200px;
   }
 `;
 export const Dot = styled.div`
@@ -197,8 +223,14 @@ export const Year = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 1050px) {
+    margin-top: 0px;
+    display: flex;
+    width: 102px;
+    font-size: 16px;
+    justify-content: flex-end;
   }
-  @media only screen and (max-width: 574px) {
+  @media only screen and (max-width: 390px) {
+    font-size: 15px;
   }
 `;

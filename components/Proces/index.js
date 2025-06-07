@@ -18,9 +18,15 @@ function Proces() {
   const size = useWindowSize();
 
   return (
-    <ProcesWrap>
+    <ProcesWrap ref={ref}>
       <Container>
-        <Title>Proces suradnje s klijentom</Title>
+        <Title
+          className={`contentFade ${
+            inView ? "contentFadeIn" : "contentFadeOut"
+          }`}
+        >
+          Proces suradnje s klijentom
+        </Title>
         <Divider />
         <Text>
           U našem odvjetničkom uredu njegujemo individualan pristup i punu

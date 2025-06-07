@@ -6,6 +6,8 @@ import {
   BottomGradient,
   WrapMiljak,
   LogoWrap,
+  WrapText,
+  Gradient,
 } from "./style.js";
 import Image from "next/image";
 
@@ -23,15 +25,21 @@ function Hero() {
   const size = useWindowSize();
 
   return (
-    <HeroWrap>
+    <HeroWrap ref={ref}>
       <Container>
-        <LogoWrap>
+        <LogoWrap inView={inView}>
           <Image src="/svg/logoMiljak.svg" layout="fill" objectFit="contain" />
         </LogoWrap>
-        <WrapMiljak>
+        <WrapText>
+          Odvjetnik s više od 15 godina iskustva u pružanju pravnih usluga.
+          Individualan pristup i sveobuhvatna pravna podrška s ciljem
+          učinkovitih i pravno održivih rješenja.
+        </WrapText>
+        <WrapMiljak inView={inView}>
           <Image src={Miljak} layout="fill" objectFit="contain" />
+          <Gradient />
         </WrapMiljak>
-        <Form />
+        <Form inView={inView} />
       </Container>
       <BottomGradient />
     </HeroWrap>

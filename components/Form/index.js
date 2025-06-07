@@ -17,12 +17,7 @@ import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 import { useEffect } from "react";
 
-function Form() {
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0.2,
-    triggerOnce: true,
-  });
+function Form({ inView }) {
   const size = useWindowSize();
   const [formData, setFormData] = useState({
     imePrezime: "",
@@ -136,7 +131,7 @@ function Form() {
         <input type="text" name="imePrezime" />
         <input type="text" name="poruka" />
       </form>
-      <FormWrap>
+      <FormWrap inView={inView}>
         <WrapText>
           Odvjetnik s više od 15 godina iskustva u pružanju pravnih usluga.
           Individualan pristup i sveobuhvatna pravna podrška s ciljem

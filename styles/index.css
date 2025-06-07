@@ -142,3 +142,14 @@ a:hover {
 }
 
 /* Add more as needed, e.g., spacing, colors, typography */
+.contentFadeOut {
+  opacity: 0;
+  transform: translate(0px, 20px);
+}
+.contentFadeIn {
+  opacity: 1;
+  transform: translate(0px, 0);
+}
+.contentFade {
+  transition: all 1s ease-out;
+}

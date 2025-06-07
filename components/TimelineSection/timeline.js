@@ -17,12 +17,12 @@ import Image from "next/image.js";
 function Timeline() {
   const size = useWindowSize();
   const { ref, inView, entry } = useInView({
-    threshold: 1,
+    threshold: size.width > 1050 ? 1 : 0.2,
     triggerOnce: true,
   });
   return (
     <WrapTimeline ref={ref}>
-      <Gradient />
+      <Gradient inView={inView} />
       <Line inView={inView} />
       <SingleBlock inView={inView} animationDelay="0.2s">
         <Text>Sveučilište u Zagrebu, Pravni fakultet</Text>

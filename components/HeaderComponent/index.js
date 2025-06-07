@@ -29,25 +29,57 @@ function HeaderComponent() {
         <WrapSingleData>
           <HiEnvelope color="white" />
           <WrapKey>Email: &nbsp;</WrapKey>
-          <WrapValue> odvjetnik.miljak@gmail.com</WrapValue>
+          <WrapValue>
+            <a
+              href="mailto:odvjetnik.miljak@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              odvjetnik.miljak@gmail.com
+            </a>
+          </WrapValue>
         </WrapSingleData>
         <WrapSingleData>
           <BsFillTelephoneFill color="white" />
 
           <WrapKey>Kontakt broj: &nbsp;</WrapKey>
-          <WrapValue> +385 99 592 9393</WrapValue>
+          <WrapValue>
+            <a
+              href="tel:+385 99 592 9393"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              +385 99 592 9393
+            </a>
+          </WrapValue>
         </WrapSingleData>{" "}
         <WrapSingleData>
           <PiMapPinFill color="white" />
 
           <WrapKey>Adresa ureda: &nbsp;</WrapKey>
-          <WrapValue> Supilova ulica 7, 10000 Zagreb</WrapValue>
+          <WrapValue>
+            <a
+              href="https://maps.app.goo.gl/5y9ThcJbyHULYiW37"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Supilova ulica 7, 10000 Zagreb
+            </a>
+          </WrapValue>
         </WrapSingleData>{" "}
         <WrapSingleData>
           <PiMapPinFill color="white" />
 
           <WrapKey>Pisarnica Zadar:&nbsp;</WrapKey>
-          <WrapValue> Ivana Meštrovića 77, 23000 Zadar</WrapValue>
+          <WrapValue>
+            <a
+              href="https://maps.app.goo.gl/PwaxLPDtYWrwnLYz5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ivana Meštrovića 77, 23000 Zadar
+            </a>
+          </WrapValue>
         </WrapSingleData>
       </Container>
     </WrapHeader>

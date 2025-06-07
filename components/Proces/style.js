@@ -15,7 +15,22 @@ export const ProcesWrap = styled.div`
 
   padding: 120px 0;
   background: #1f273b;
-  @media only screen and (max-width: 630px) {
+  @media only screen and (max-width: 750px) {
+    padding: 60px 0;
+  }
+  @media only screen and (max-width: 450px) {
+    padding: 60px 0 0 0;
+  }
+`;
+export const WrapSlide = styled.div`
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 230px;
+  background: #232c43;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.25);
+  padding: 30px 16px;
+  @media only screen and (max-width: 750px) {
   }
 `;
 
@@ -53,16 +68,30 @@ export const Wrapper = styled.div`
   width: 800px;
   transition: opacity 0.4s ease-in-out;
   opacity: ${(props) => (props.inView ? "1" : "0")};
-  /* overflow: hidden; */
-  /* .stacked-carousel-responsive-container {
-    width: 100%;
-  } */
   margin: 100px 0;
-  @media only screen and (max-width: 600px) {
-    /* height: 110vh; */
+
+  .slick-dots {
+    bottom: -40px;
   }
+
+  .slick-dots li button:before {
+    /* To set color, you need to use the 'color' property */
+    color: #ffffff; /* This was just '#ffffff' which is not a CSS property */
+    font-size: 12px !important; /* '!important' is generally discouraged but kept if specifically needed for overriding */
+  }
+
+  .slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    color: white;
+  }
+
+  @media only screen and (max-width: 800px) {
+    width: 95%;
+  }
+
   @media only screen and (max-width: 430px) {
-    /* display: none; */
+    height: auto;
+    /* Add specific styles for screens less than 430px wide here if needed */
   }
 `;
 export const ArrowRight = styled.div`
@@ -110,7 +139,8 @@ export const Container = styled.div`
     width: 100%;
     height: auto;
   }
-  @media only screen and (max-width: 574px) {
+  @media only screen and (max-width: 550px) {
+    padding: 0 20px;
   }
 `;
 export const Title = styled.div`
@@ -122,6 +152,8 @@ export const Title = styled.div`
   font-weight: 400;
   line-height: normal;
   @media only screen and (max-width: 770px) {
+    font-size: 26px;
+    text-align: center;
   }
   @media only screen and (max-width: 574px) {
   }

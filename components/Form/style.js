@@ -17,7 +17,12 @@ export const FormWrap = styled.form`
   border: 1px solid #273149;
   background: #171e2e;
   padding: 28px;
-  @media only screen and (max-width: 630px) {
+  transition: opacity 1s ease-out;
+  opacity: ${(props) => (props.inView === true ? "1" : "0")};
+  @media only screen and (max-width: 500px) {
+    padding: 20px;
+
+    width: 100%;
   }
 `;
 export const WrapText = styled.div`
@@ -32,7 +37,8 @@ export const WrapText = styled.div`
   line-height: 150%; /* 30px */
   top: -150px;
   left: 5px;
-  @media only screen and (max-width: 630px) {
+  @media only screen and (max-width: 1050px) {
+    display: none;
   }
 `;
 export const WrapError = styled.div`

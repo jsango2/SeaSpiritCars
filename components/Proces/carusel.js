@@ -3,9 +3,57 @@ import {
   StackedCarousel,
   ResponsiveContainer,
 } from "react-stacked-center-carousel";
+import { WrapSlide } from "./style.js";
 
-import { useContext } from "react";
 import useWindowSize from "../helper/usewindowsize.js";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+const settings = {
+  dots: true,
+  infinite: true,
+
+  fade: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  cssEase: "linear",
+  className: "testimonialSlider",
+  speed: 200,
+
+  responsive: [
+    {
+      breakpoint: 800,
+      settings: {
+        dots: false,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+
+        autoplaySpeed: 0,
+        cssEase: "linear",
+        className: "testimonialSlider",
+        speed: 200,
+      },
+    },
+    {
+      breakpoint: 450,
+      settings: {
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 0,
+        cssEase: "linear",
+        className: "testimonialSlider",
+        speed: 200,
+      },
+    },
+  ],
+};
 
 import {
   CaruselCard,
@@ -88,7 +136,18 @@ export default function ResponsiveCarousel(props) {
       ref={ref}
       inView={inView}
     >
-      {size.width > 600 && (
+      {size.width < 1050 && (
+        <Slider {...settings}>
+          {data.map((slide) => (
+            <WrapSlide key={slide.number}>
+              <CardNumber>{slide.number}</CardNumber>
+              <CardTitle>{slide.title}</CardTitle>
+              <CardText>{slide.text}</CardText>
+            </WrapSlide>
+          ))}
+        </Slider>
+      )}
+      {size.width > 1050 && (
         <>
           <ArrowLeft onClick={() => reff.current.goBack()}>
             <Image src="/svg/prev.svg" layout="fill" objectFit="contain" />
@@ -98,7 +157,7 @@ export default function ResponsiveCarousel(props) {
           </ArrowRight>
         </>
       )}
-      {inView && (
+      {size.width > 1050 && (
         <ResponsiveContainer
           carouselRef={reff}
           render={(parentWidth, carouselRef) => {

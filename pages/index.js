@@ -4,13 +4,16 @@ import Head from "next/head";
 import PodrucjeRadaSection from "../components/PodrucjeRadaSection";
 import TimelineSection from "../components/TimelineSection";
 import Proces from "../components/Proces";
+import Meta from "../components/meta";
+import FooterSection from "../components/FooterSection";
 
 export default function IndexPage() {
   return (
     <>
+      <Meta />
       <Head>
-        <title>MILAJK</title>
-        <meta property="og:title" content="MILJAK" key="title" />
+        <title>Odvjetnik Dino Miljak</title>
+        <meta property="og:title" content="Odvjetnik Dino Miljak" key="title" />
         {/* <link
           rel="alternate"
           hreflang={locale === "hr" ? "hr" : "en"}
@@ -63,6 +66,7 @@ export default function IndexPage() {
       <PodrucjeRadaSection />
       <TimelineSection />
       <Proces />
+      <FooterSection />
     </>
   );
 }
