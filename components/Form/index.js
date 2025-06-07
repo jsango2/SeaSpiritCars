@@ -96,9 +96,14 @@ function Form() {
       body: encode({ "form-name": "contact", ...formData }),
     })
       .then(() => setFormSent(true))
-      .then(() => setSubmissionStatus("Poslano"))
+      .then(
+        () => setSubmissionStatus("Poslano"),
+        setTimeout(() => {
+          setSubmissionStatus("idle"); // Or whatever your initial status is for "Pošaljite upit"
+        }, 3000) // 3000 milliseconds = 3 seconds
+      )
       .then(() => setFormData({ email: "", poruka: "", imePrezime: "" }))
-      .catch((error) => alert(error));
+      .catch((error) => alert(error), setSubmissionStatus("error"));
   };
   // --- NEW: useEffect for error message timeout ---
   useEffect(() => {
@@ -173,6 +178,8 @@ function Form() {
             ? "Šaljem..."
             : submissionStatus === "Poslano"
             ? "Poslano"
+            : submissionStatus === "error"
+            ? "Greška u slanju"
             : "Pošaljite upit"}
         </SubmitButton>
       </FormWrap>
