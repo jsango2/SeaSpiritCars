@@ -33,6 +33,8 @@ function Form() {
 
   // Stanje za status slanja (npr. loading, success, error)
   const [submissionStatus, setSubmissionStatus] = useState(null);
+  const [formSent, setFormSent] = useState(false);
+  const [isSending, setIsSending] = useState(false);
 
   // Funkcija za ažuriranje stanja forme kada korisnik unosi podatke
   const handleChange = (e) => {
@@ -76,7 +78,7 @@ function Form() {
     if (!validateForm()) {
       setSubmissionStatus("error");
       return; // Zaustavi slanje ako validacija ne prođe
-    } else console.log("DATA SENDING!");
+    } else setIsSending(true);
     sendFormToNetlify();
   };
 
@@ -94,9 +96,8 @@ function Form() {
       body: encode({ "form-name": "contact", ...formData }),
     })
       .then(() => setFormSent(true))
-      .then(() => setIsSending(false))
-      // .then(() => setFormData({ name: "", email: "", interest: "" }))
-      .then(() => setFormData({ email: "" }))
+      .then(() => setSubmissionStatus("Poslano"))
+      .then(() => setFormData({ email: "", poruka: "", imePrezime: "" }))
       .catch((error) => alert(error));
   };
   // --- NEW: useEffect for error message timeout ---
@@ -168,8 +169,11 @@ function Form() {
           onClick={(e) => handleSubmit(e)}
           disabled={submissionStatus === "loading"}
         >
-          {" "}
-          {submissionStatus === "loading" ? "Šaljem..." : "Pošaljite upit"}
+          {submissionStatus === "loading"
+            ? "Šaljem..."
+            : submissionStatus === "Poslano"
+            ? "Poslano"
+            : "Pošaljite upit"}
         </SubmitButton>
       </FormWrap>
     </>
