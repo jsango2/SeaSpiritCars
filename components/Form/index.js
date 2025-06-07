@@ -76,7 +76,6 @@ function Form() {
     setErrors({}); // Očisti prethodne greške
 
     if (!validateForm()) {
-      setSubmissionStatus("error");
       return; // Zaustavi slanje ako validacija ne prođe
     } else setIsSending(true);
     sendFormToNetlify();
