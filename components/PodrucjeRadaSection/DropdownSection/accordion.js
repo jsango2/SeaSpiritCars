@@ -130,7 +130,7 @@ const AccordionItem = ({ header, children, isActive, onClick, itemKey }) => {
   const [contentHeight, setContentHeight] = useState(0);
   const { ref, inView, entry } = useInView({
     threshold: 0,
-    triggerOnce: false,
+    triggerOnce: true,
   });
   useEffect(() => {
     if (contentRef.current) {
