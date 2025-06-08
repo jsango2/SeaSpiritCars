@@ -7,7 +7,7 @@ import {
   WrapData,
   LogoWrap,
 } from "./style.js";
-// import MarikomercLogo from "../../assets/svg/marikomerc_logo_footer.svg";
+import LogoMiljak from "../../assets/images/logoMiljak.webp";
 
 import useWindowSize from "../helper/usewindowsize";
 import { useInView } from "react-intersection-observer";
@@ -28,10 +28,10 @@ function FooterSection() {
       <Container>
         <LogoWrap>
           <Image
-            src="/svg/logoMiljak.svg"
+            src={LogoMiljak}
             layout="fill"
             objectFit="contain"
-            priority
+            priority={true}
           />
         </LogoWrap>
         <WrapData>

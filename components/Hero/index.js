@@ -30,10 +30,10 @@ function Hero() {
       <Container>
         <LogoWrap inView={inView}>
           <Image
-            src="/svg/logoMiljak.svg"
+            src={LogoMiljak}
             layout="fill"
             objectFit="contain"
-            priority
+            priority={true}
           />
         </LogoWrap>
         <WrapText inView={inView}>

@@ -41,35 +41,6 @@ const MeniMobile = ({
   return (
     <>
       <div className={`menu ${isOpen ? "openMenu" : "closedMenu"}`}>
-        {/* <div className={`menu ${isOpen ? "openMenu" : "closedMenu"}`}> */}
-        {/* className={` ${inView ? "inViewHero" : "outViewHero"}`} */}
-        {/* <div
-          onClick={() => {
-            setIsOnamaMenuOpen(!isOnamaMenuOpen);
-          }}
-          className={`linkOnama ${
-            isOnamaMenuOpen ? "linkOnamaOpen" : "linkOnamaClosed"
-          }`}
-        >
-          {locale === "hr" ? "O nama" : "About us"}
-        </div>
-        {isOnamaMenuOpen && (
-          <div className="mobileSubLinkParent">
-            <Link href="/o-nama">
-              {locale === "hr" ? "Naša priča" : "Our story"}
-            </Link>
-            <Link href="/marikomerc-kvalitete">
-              {locale === "hr"
-                ? "Marikomerc kvalitete"
-                : "Marikomerc qualities"}
-            </Link>
-            <Link href="/prerada-i-skladiste">
-              {locale === "hr"
-                ? "Prerada i skladište"
-                : "Processing and Storage"}
-            </Link>
-          </div>
-        )} */}
         <Link className="mobileLinks" href="/">
           {locale === "hr" ? "Početna stranica" : "Home"}
         </Link>

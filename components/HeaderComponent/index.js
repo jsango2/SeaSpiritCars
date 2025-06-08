@@ -5,7 +5,6 @@ import {
   WrapSingleData,
   WrapValue,
 } from "./style.js";
-// import MarikomercLogo from "../../assets/svg/marikomerc_logo_footer.svg";
 
 import useWindowSize from "../helper/usewindowsize.js";
 import { useInView } from "react-intersection-observer";
