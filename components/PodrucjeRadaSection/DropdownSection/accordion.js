@@ -125,17 +125,13 @@ const AccordionContent = styled.div`
  * @param {function} onClick - Callback to inform the parent when this item is clicked.
  * @param {string | number} itemKey - Unique identifier for this item, used by the parent.
  */
-const AccordionItem = ({
-  header,
-  children,
-  isActive,
-  onClick,
-  itemKey,
-  inView,
-}) => {
+const AccordionItem = ({ header, children, isActive, onClick, itemKey }) => {
   const contentRef = useRef(null);
   const [contentHeight, setContentHeight] = useState(0);
-
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    triggerOnce: false,
+  });
   useEffect(() => {
     if (contentRef.current) {
       setContentHeight(isActive ? contentRef.current.scrollHeight : 0);
@@ -157,20 +153,22 @@ const AccordionItem = ({
   };
 
   return (
-    <AccordionItemWrapper
-      className={`contentFade ${inView ? "contentFadeIn" : "contentFadeOut"}`}
-    >
-      <AccordionHeader onClick={handleClick} $isOpen={isActive}>
-        <AccordionTitle>{header}</AccordionTitle>
-        <AccordionIcon $isOpen={isActive}>&#x2303;</AccordionIcon>
-      </AccordionHeader>
-      <AccordionContentWrapper
-        $isOpen={isActive}
-        $contentHeight={contentHeight}
+    <div ref={ref}>
+      <AccordionItemWrapper
+        className={`contentFade ${inView ? "contentFadeIn" : "contentFadeOut"}`}
       >
-        <AccordionContent ref={contentRef}>{children}</AccordionContent>
-      </AccordionContentWrapper>
-    </AccordionItemWrapper>
+        <AccordionHeader onClick={handleClick} $isOpen={isActive}>
+          <AccordionTitle>{header}</AccordionTitle>
+          <AccordionIcon $isOpen={isActive}>&#x2303;</AccordionIcon>
+        </AccordionHeader>
+        <AccordionContentWrapper
+          $isOpen={isActive}
+          $contentHeight={contentHeight}
+        >
+          <AccordionContent ref={contentRef}>{children}</AccordionContent>
+        </AccordionContentWrapper>
+      </AccordionItemWrapper>
+    </div>
   );
 };
 
