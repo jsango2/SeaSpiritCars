@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 // import { HeroWrap } from "./style.js"
 
-export const FormWrap = styled.h1`
+export const FormWrap = styled.form`
   position: relative;
   z-index: 1;
   width: 467px;
@@ -25,7 +25,7 @@ export const FormWrap = styled.h1`
     width: 100%;
   }
 `;
-export const WrapText = styled.div`
+export const WrapText = styled.h1`
   position: absolute;
   z-index: 1;
   width: 97%;
