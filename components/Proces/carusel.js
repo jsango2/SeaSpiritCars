@@ -43,7 +43,7 @@ const settings = {
       settings: {
         dots: true,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 0,

@@ -26,8 +26,8 @@ export const WrapAll = styled.div`
   align-items: center;
   flex-direction: column;
   background: #1f273b;
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 120px;
+  padding-bottom: 120px;
   @media only screen and (max-width: 430px) {
     height: auto;
     padding: 0px 0 60px 0;

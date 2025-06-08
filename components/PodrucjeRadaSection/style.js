@@ -29,7 +29,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 
   @media only screen and (max-width: 1050px) {
     padding: 0 20px;
@@ -45,6 +45,7 @@ export const Title = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-align: center;
   @media only screen and (max-width: 770px) {
     font-size: 26px;
     text-align: center;
