@@ -25,7 +25,7 @@ export const Container = styled.div`
   width: 960px;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   @media only screen and (max-width: 1050px) {
     flex-direction: column;
@@ -105,7 +105,7 @@ export const LogoWrap = styled.div`
   width: 183px;
   height: 135px;
   top: -138px;
-  left: -77px;
+  left: -17px;
   transition: opacity 1s ease-out;
   transition-delay: 0.9s;
   opacity: ${(props) => (props.inView === true ? "1" : "0")};
