@@ -15,6 +15,11 @@ function Proces() {
     threshold: 0.2,
     triggerOnce: true,
   });
+  const { ref: refDivider, inView: inViewDivider } = useInView({
+    threshold: 0,
+    triggerOnce: false,
+  });
+
   const size = useWindowSize();
 
   return (
@@ -28,7 +33,12 @@ function Proces() {
           Proces suradnje s klijentom
         </Title>
         <Divider />
-        <Text>
+        <Text
+          ref={refDivider}
+          className={`contentFade ${
+            inViewDivider ? "contentFadeIn" : "contentFadeOut"
+          }`}
+        >
           U našem odvjetničkom uredu njegujemo individualan pristup i punu
           transparentnost u svakom koraku suradnje. Svakom predmetu pristupamo
           sustavno i odgovorno, uz prethodna pojašnjenja Vama kao klijentu o

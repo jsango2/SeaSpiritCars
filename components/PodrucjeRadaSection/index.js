@@ -20,6 +20,10 @@ function PodrucjeRadaSection() {
     threshold: 0,
     triggerOnce: false,
   });
+  const { ref: refDivider, inView: inViewDivider } = useInView({
+    threshold: 0,
+    triggerOnce: false,
+  });
   return (
     <WrapAll ref={ref}>
       <Container>
@@ -31,7 +35,12 @@ function PodrucjeRadaSection() {
           Područja rada
         </Title>
         <Divider />
-        <Text>
+        <Text
+          ref={refDivider}
+          className={`contentFade ${
+            inViewDivider ? "contentFadeIn" : "contentFadeOut"
+          }`}
+        >
           Odvjetnik Miljak ima široko iskustvo u pružanju pravnih usluga
           klijentima u području prava u svezi s nekretninama, građenjem i
           razvojem projekata, uključujući pravno praćenje investicija,
