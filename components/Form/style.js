@@ -78,9 +78,15 @@ export const FormInput = styled.input`
   background: #1e2639; /* Slightly lighter dark background for input */
   border: none; /* No border */
   border-radius: 5px; /* Rounded corners for inputs */
-  color: #ffffff; /* White text for input content */
-  font-size: 1em; /* Standard font size */
+
   outline: none; /* Remove outline on focus */
+
+  color: #929baf;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   /* IMPORTANT: Autocomplete prevention CSS */
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
@@ -115,12 +121,17 @@ export const FormTextarea = styled.textarea`
   background: #1e2639; /* Slightly lighter dark background for input */
   border: none; /* No border */
   border-radius: 5px; /* Rounded corners for inputs */
-  color: #ffffff; /* White text for input content */
-  font-size: 1em; /* Standard font size */
   outline: none; /* Remove outline on focus */
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
   display: flex;
   min-height: 130px;
+
+  color: #929baf;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   &::placeholder {
     color: #a0a4b3; /* Lighter placeholder text color */
     opacity: 0.8; /* Slightly transparent placeholder */
