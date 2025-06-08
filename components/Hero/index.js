@@ -34,6 +34,7 @@ function Hero() {
             layout="fill"
             objectFit="contain"
             priority={true}
+            alt="Odvjetnik Dino Miljak"
           />
         </LogoWrap>
         <WrapText inView={inView}>
@@ -42,7 +43,12 @@ function Hero() {
           učinkovitih i pravno održivih rješenja.
         </WrapText>
         <WrapMiljak inView={inView}>
-          <Image src={Miljak} layout="fill" objectFit="contain" />
+          <Image
+            src={Miljak}
+            layout="fill"
+            objectFit="contain"
+            alt="Odvjetnik Dino Miljak"
+          />
           <Gradient />
         </WrapMiljak>
         <Form inView={inView} />

@@ -14,6 +14,7 @@ export default function IndexPage() {
       <Head>
         <title>Odvjetnik Dino Miljak</title>
         <meta property="og:title" content="Odvjetnik Dino Miljak" key="title" />
+        <meta name="twitter:title" content="Odvjetnik Dino Miljak" />
         {/* <link
           rel="alternate"
           hreflang={locale === "hr" ? "hr" : "en"}
@@ -31,35 +32,20 @@ export default function IndexPage() {
           name="google-site-verification"
           content="KSOsBchhDMtcxBavoVnUbAVI8Jxcipv9J5ceC1K4Rag"
         /> */}
-        {/* <meta
-          property="og:image"
-          content="http://marikomerc.sutra.hr/wp-content/uploads/2024/01/perlaOGimage.png"
-        />
+        <meta property="og:image" content="/ogImage.webp" />
         <meta
           name="description"
-          content={
-            locale === "hr"
-              ? "Otkrijte raznolike recepte na Perla web stranici, idealne za ljubitelje morskih plodova. Pronađite inspiraciju za vaš sljedeći obrok, od jednostavnih do gurmanskih jela."
-              : "Discover a variety of recipes on Perla's website, perfect for seafood enthusiasts. From simple to gourmet, find inspiration for your next meal."
-          }
+          content="Odvjetnik s više od 15 godina iskustva u pružanju pravnih usluga. Individualan pristup i sveobuhvatna pravna podrška s ciljem učinkovitih i pravno održivih rješenja."
           key="desc"
         />
         <meta
           property="og:description"
-          content={
-            locale === "hr"
-              ? "Otkrijte raznolike recepte na Perla web stranici, idealne za ljubitelje morskih plodova. Pronađite inspiraciju za vaš sljedeći obrok, od jednostavnih do gurmanskih jela."
-              : "Discover a variety of recipes on Perla's website, perfect for seafood enthusiasts. From simple to gourmet, find inspiration for your next meal."
-          }
+          content="Odvjetnik s više od 15 godina iskustva u pružanju pravnih usluga. Individualan pristup i sveobuhvatna pravna podrška s ciljem učinkovitih i pravno održivih rješenja."
         />
         <meta
           property="twitter:description"
-          content={
-            locale === "hr"
-              ? "Otkrijte raznolike recepte na Perla web stranici, idealne za ljubitelje morskih plodova. Pronađite inspiraciju za vaš sljedeći obrok, od jednostavnih do gurmanskih jela."
-              : "Discover a variety of recipes on Perla's website, perfect for seafood enthusiasts. From simple to gourmet, find inspiration for your next meal."
-          }
-        /> */}
+          content="Odvjetnik s više od 15 godina iskustva u pružanju pravnih usluga. Individualan pristup i sveobuhvatna pravna podrška s ciljem učinkovitih i pravno održivih rješenja."
+        />
       </Head>
       <HeaderComponent />
       <Hero />

@@ -36,7 +36,7 @@ export const Container = styled.div`
     padding: 0 20px 40px 20px;
   }
 `;
-export const WrapText = styled.div`
+export const WrapText = styled.h1`
   display: none;
   @media only screen and (max-width: 1050px) {
     display: block;
