@@ -18,15 +18,14 @@ import LogoMiljak from "../../assets/images/logoMiljak.webp";
 
 function FooterSection() {
   const size = useWindowSize();
-  // const { ref, inView, entry } = useInView({
-
-  //   threshold: 0,
-  //   triggerOnce: true,
-  // });
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
   return (
     <WrapAll>
-      <Container>
-        <LogoWrap>
+      <Container ref={ref}>
+        <LogoWrap inView={inView}>
           <Image
             src={LogoMiljak}
             layout="fill"
