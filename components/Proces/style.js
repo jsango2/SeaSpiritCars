@@ -51,6 +51,7 @@ export const CaruselCard = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+
   @media only screen and (max-width: 650px) {
     max-width: 400px;
     height: 390px;
@@ -69,7 +70,14 @@ export const Wrapper = styled.div`
   transition: opacity 0.4s ease-in-out;
   opacity: ${(props) => (props.inView ? "1" : "0")};
   margin: 100px 0;
-
+  .stacked-carousel-responsive-container {
+    height: 300px;
+  }
+  .react-stacked-center-carousel {
+    height: 380px;
+    display: flex;
+    align-items: center;
+  }
   .slick-dots {
     bottom: -40px;
   }
