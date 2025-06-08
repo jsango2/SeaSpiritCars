@@ -32,6 +32,7 @@ function FooterSection() {
             layout="fill"
             objectFit="contain"
             priority={true}
+            alt="Odvjetnik Dino Miljak"
           />
         </LogoWrap>
         <WrapData>

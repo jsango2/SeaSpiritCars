@@ -150,10 +150,20 @@ export default function ResponsiveCarousel(props) {
       {size.width > 1050 && (
         <>
           <ArrowLeft onClick={() => reff.current.goBack()}>
-            <Image src="/svg/prev.svg" layout="fill" objectFit="contain" />
+            <Image
+              src="/svg/prev.svg"
+              layout="fill"
+              objectFit="contain"
+              alt="arrow"
+            />
           </ArrowLeft>
           <ArrowRight onClick={() => reff.current.goNext()}>
-            <Image src="/svg/next.svg" layout="fill" objectFit="contain" />
+            <Image
+              src="/svg/next.svg"
+              layout="fill"
+              objectFit="contain"
+              alt="arrow"
+            />
           </ArrowRight>
         </>
       )}
