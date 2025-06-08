@@ -15,6 +15,7 @@ import useWindowSize from "../helper/usewindowsize.js";
 
 import { useInView } from "react-intersection-observer";
 import Miljak from "../../assets/images/miljakHero.webp";
+import LogoMiljak from "../../assets/images/logoMiljak.webp";
 import Form from "../Form/index.js";
 function Hero() {
   const { ref, inView, entry } = useInView({
@@ -28,9 +29,14 @@ function Hero() {
     <HeroWrap ref={ref}>
       <Container>
         <LogoWrap inView={inView}>
-          <Image src="/svg/logoMiljak.svg" layout="fill" objectFit="contain" />
+          <Image
+            src="/svg/logoMiljak.svg"
+            layout="fill"
+            objectFit="contain"
+            priority
+          />
         </LogoWrap>
-        <WrapText>
+        <WrapText inView={inView}>
           Odvjetnik s više od 15 godina iskustva u pružanju pravnih usluga.
           Individualan pristup i sveobuhvatna pravna podrška s ciljem
           učinkovitih i pravno održivih rješenja.

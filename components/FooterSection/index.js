@@ -27,7 +27,12 @@ function FooterSection() {
     <WrapAll>
       <Container>
         <LogoWrap>
-          <Image src="/svg/logoMiljak.svg" layout="fill" objectFit="contain" />
+          <Image
+            src="/svg/logoMiljak.svg"
+            layout="fill"
+            objectFit="contain"
+            priority
+          />
         </LogoWrap>
         <WrapData>
           <WrapSingleData>

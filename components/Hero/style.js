@@ -52,6 +52,9 @@ export const WrapText = styled.div`
     font-weight: 400;
     line-height: 150%; /* 30px */
     margin: 40px 0;
+    transition-delay: 0.6s;
+    transition: opacity 1s ease-out;
+    opacity: ${(props) => (props.inView === true ? "1" : "0")};
   }
 `;
 export const WrapMiljak = styled.div`
@@ -59,6 +62,7 @@ export const WrapMiljak = styled.div`
   z-index: 10;
   width: 377px;
   height: 576px;
+  transition-delay: 0.9s;
   transition: opacity 1s ease-out;
   opacity: ${(props) => (props.inView === true ? "1" : "0")};
   @media only screen and (max-width: 770px) {
@@ -102,6 +106,7 @@ export const LogoWrap = styled.div`
   height: 135px;
   top: -138px;
   left: -77px;
+  transition-delay: 0.3s;
   transition: opacity 1s ease-out;
   opacity: ${(props) => (props.inView === true ? "1" : "1")};
 
