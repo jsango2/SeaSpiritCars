@@ -40,6 +40,7 @@ export const Container = styled.div`
     max-width: 380px;
     align-items: flex-start;
     min-width: 365px;
+    padding: 5px 0;
   }
 `;
 
@@ -65,7 +66,7 @@ export const WrapSingleData = styled.div`
     svg {
       display: block;
     }
-    margin: 8px 20px;
+    margin: 5px 20px;
   }
   @media only screen and (max-width: 360px) {
     svg {
