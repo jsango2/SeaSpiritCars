@@ -88,7 +88,7 @@ export const LogoWrap = styled.div`
   height: 135px;
 
   transition: opacity 1s ease-out;
-  opacity: ${(props) => (props.inView === true ? "1" : "1")};
+  opacity: ${(props) => (props.inView === true ? "1" : "0")};
 
   @media only screen and (max-width: 770px) {
   }

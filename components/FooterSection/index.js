@@ -7,7 +7,6 @@ import {
   WrapData,
   LogoWrap,
 } from "./style.js";
-import LogoMiljak from "../../assets/images/logoMiljak.webp";
 
 import useWindowSize from "../helper/usewindowsize";
 import { useInView } from "react-intersection-observer";
@@ -15,6 +14,7 @@ import { HiEnvelope } from "react-icons/hi2";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { PiMapPinFill } from "react-icons/pi";
 import Image from "next/image.js";
+import LogoMiljak from "../../assets/images/logoMiljak.webp";
 
 function FooterSection() {
   const size = useWindowSize();
@@ -31,7 +31,6 @@ function FooterSection() {
             src={LogoMiljak}
             layout="fill"
             objectFit="contain"
-            priority={true}
             alt="Odvjetnik Dino Miljak"
           />
         </LogoWrap>
