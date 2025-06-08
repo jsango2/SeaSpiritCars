@@ -72,9 +72,11 @@ export const Wrapper = styled.div`
   margin: 100px 0;
   .stacked-carousel-responsive-container {
     height: 300px;
+    display: flex;
+    align-items: center;
   }
   .react-stacked-center-carousel {
-    height: 380px;
+    height: 380px !important;
     display: flex;
     align-items: center;
   }
