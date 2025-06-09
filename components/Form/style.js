@@ -22,7 +22,7 @@ export const FormWrap = styled.form`
   top: 0px;
   @media only screen and (max-width: 500px) {
     padding: 20px;
-
+    height: 512px;
     width: 100%;
   }
 `;
@@ -47,6 +47,7 @@ export const WrapError = styled.div`
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: red;
   @media only screen and (max-width: 630px) {
   }
 `;

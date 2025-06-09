@@ -24,7 +24,7 @@ const MainWrapper = styled.div`
   padding-bottom: 40px; /* Add some padding at the bottom */
   padding-top: 0px;
   @media only screen and (max-width: 850px) {
-    padding-top: 40px;
+    padding-top: 0px;
   }
 `;
 
