@@ -32,7 +32,7 @@ function PodrucjeRadaSection() {
             inView ? "contentFadeIn" : "contentFadeOut"
           }`}
         >
-          Područja rada
+          Profesionalna biografija
         </Title>
         <Divider />
         <Text
@@ -41,35 +41,38 @@ function PodrucjeRadaSection() {
             inViewDivider ? "contentFadeIn" : "contentFadeOut"
           }`}
         >
-          Odvjetnik Miljak ima široko iskustvo u pružanju pravnih usluga
-          klijentima u području prava u svezi s nekretninama, građenjem i
-          razvojem projekata, uključujući pravno praćenje investicija,
-          strukturiranje imovinskopravnih odnosa u svezi nekretnina, vođenje
-          postupaka kupoprodaje nekretnina te rješavanje zemljišnoknjižnih
-          pitanja.
+          Pravni put započeo sam 2004. godine, nakon završetka Gimnazije Jurja
+          Barakovića u Zadru, upisom na Pravni fakultet Sveučilišta u Zagrebu.
+          Diplomirao sam 2008., a sljedeće godine započeo karijeru kao
+          odvjetnički vježbenik u odvjetničkom društvu Hanžeković & Partneri
+          d.o.o. <br />
           <br />
-          <br /> Ima značajno iskustvo u trgovačkom i ugovornom pravu, naročito
-          u pitanjima uređenja međuvlasničkih odnosa u trgovačkim društvima, kao
-          i u postupcima spajanja i preuzimanja trgovačkih društava (M&amp;A
-          transakcije) gdje savjetuje domaće i strane klijente kroz sve faze
-          pojedine transakcije. <br />
+          Nakon položenog pravosudnog ispita 2011., nastavio sam rad u istom
+          društvu kao odvjetnik do 2020. godine. Tijekom tog razdoblja stekao
+          sam bogato iskustvo, osobito u trgovačkom pravu, spajanjima i
+          preuzimanjima trgovačkih društava (M&A), dubinskim analizama (due
+          diligence postupci), nekretninskim transakcijama, kao i u zastupanju
+          stranaka u sudskim i upravnim postupcima, radeći na složenim
+          predmetima za domaće i inozemne klijente. <br />
+          <br />U razdoblju od 2020. do 2025. godine bio sam jedan od suosnivača
+          i partnera u odvjetničkom društvu Metelko, Knežević & Partneri d.o.o.,
+          gdje sam dodatno razvio svoju praksu u području trgovačkog,
+          nekretninskog, radnog, nasljednog i obiteljskog prava, kao i u
+          zastupanju klijenata u sudskim postupcima. <br />
           <br />
-          Posebnu pravnu podršku pruža i klijentima iz IT sektora i maloprodaje,
-          s fokusom na zaštitu osobnih podataka (GDPR), regulatornu usklađenost
-          i digitalno poslovanje. U području radnog prava savjetuje poslodavce i
-          radnike u različitim aspektima radnog prava, uključujući pravno
-          savjetovanje u vezi s pravima i obvezama iz radnog odnosa, izradu
-          interne radno-pravne dokumentacije, kao i zastupanje u radnim
-          sporovima. <br />
-          <br />
-          Odvjetnik Miljak također savjetuje klijente u poreznim pitanjima
-          osobito u kontekstu poslovanja, imovine i transakcija te zastupa
-          stranke u poreznim postupcima pred nadležnim tijelima. Ima široko
-          iskustvo u nasljednom i obiteljskom pravu, s naglaskom na uređenje
-          imovinskopravnih odnosa, te aktivno zastupa klijente pred sudovima i
-          upravnim tijelima, osobito u trgovačkim, radnim i imovinskim
-          sporovima, kao i u postupcima vezanim za stečaj i restrukturiranje.
+          Od 2025. godine odvjetničku djelatnost nastavljam kroz vlastiti
+          odvjetnički ured, s ciljem pružanja sveobuhvatne i specijalizirane
+          pravne podrške, uz individualiziran pristup i punu posvećenost svakom
+          klijentu.
         </Text>
+        <Title
+          className={`contentFade ${
+            inView ? "contentFadeIn" : "contentFadeOut"
+          }`}
+        >
+          Područja rada
+        </Title>
+        <Divider />
         <HomePage />
       </Container>
     </WrapAll>

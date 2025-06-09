@@ -14,6 +14,7 @@ import Image from "next/image.js";
 import { HiEnvelope } from "react-icons/hi2";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { PiMapPinFill } from "react-icons/pi";
+import { FaWhatsapp } from "react-icons/fa";
 
 function HeaderComponent() {
   const size = useWindowSize();
@@ -25,6 +26,20 @@ function HeaderComponent() {
   return (
     <WrapHeader>
       <Container>
+        <WrapSingleData>
+          <FaWhatsapp color="white" />
+
+          <WrapKey>Kontakt broj: &nbsp;</WrapKey>
+          <WrapValue>
+            <a
+              href="tel:+385 99 592 9393"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              +385 99 592 9393
+            </a>
+          </WrapValue>
+        </WrapSingleData>{" "}
         <WrapSingleData>
           <HiEnvelope color="white" />
           <WrapKey>Email: &nbsp;</WrapKey>
@@ -38,20 +53,6 @@ function HeaderComponent() {
             </a>
           </WrapValue>
         </WrapSingleData>
-        <WrapSingleData>
-          <BsFillTelephoneFill color="white" />
-
-          <WrapKey>Kontakt broj: &nbsp;</WrapKey>
-          <WrapValue>
-            <a
-              href="tel:+385 99 592 9393"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              +385 99 592 9393
-            </a>
-          </WrapValue>
-        </WrapSingleData>{" "}
         <WrapSingleData>
           <PiMapPinFill color="white" />
 

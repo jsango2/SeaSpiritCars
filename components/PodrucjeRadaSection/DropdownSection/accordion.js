@@ -10,9 +10,9 @@ const AccordionColumnsContainer = styled.div`
   width: 100%;
   max-width: 1200px; /* Maximum width for the entire layout */
   margin: 40px auto; /* Center the layout with vertical margins */
-  padding: 0 20px; /* Horizontal padding for responsiveness */
+  padding: 0 0px; /* Horizontal padding for responsiveness */
   box-sizing: border-box;
-  height: 600px;
+  height: 500px;
   /* NOTE: Removed background-color from here. It should be applied to the body or a higher-level wrapper */
   /* color: #e2e8f0; // Keep text color here, as it's for the content */
   @media (max-width: 1050px) {

@@ -22,7 +22,7 @@ const MainWrapper = styled.div`
   flex-direction: column;
   align-items: center; /* Center content horizontally */
   padding-bottom: 40px; /* Add some padding at the bottom */
-  padding-top: 100px;
+  padding-top: 0px;
   @media only screen and (max-width: 850px) {
     padding-top: 40px;
   }
@@ -40,45 +40,35 @@ export default function HomePage() {
       <GlobalStyle /> {/* Apply global styles */}
       <MainWrapper>
         <Accordion>
-          <AccordionItem
-            header="Nekretnine, građenje i razvoj projekata"
-            itemKey="nekretnine"
-          >
-            Izrada i revizija ugovora o kupoprodaji, zakupu, najmu, građenju,
-            diobi, teretima i služnostima. Pravni due diligence, podrška u svim
-            fazama investicijskih projekata, etažiranje, zemljišnoknjižni upisi,
-            rješavanje zemljišnoknjižnog stanja i zastupanje u sporovima.
+          <AccordionItem header="Pravo nekretnina" itemKey="nekretnine">
+            Pružam pravnu podršku u svim fazama nekretninskih transakcija i
+            projekata – od pravnog praćenja investicija i strukturiranja
+            imovinskopravnih odnosa do kupoprodaje i rješavanja
+            zemljišnoknjižnih pitanja.
           </AccordionItem>
-          <AccordionItem
-            header="Trgovačko pravo i pravo društava"
-            itemKey="trgovacko"
-          >
-            Osnivanje društava, strukturiranje i pravno uređenje međuvlasničkih
-            odnosa i korporativnog upravljanja. Izrada društvenih ugovora,
-            statuta i internih akata. Zastupanje u sporovima između članova
-            društava.
+          <AccordionItem header="Trgovačko pravo" itemKey="trgovacko">
+            Savjetujem klijente u vezi s uređenjem unutarnjih odnosa u
+            trgovačkim društvima, bavim se statusnim promjenama te postupcima
+            spajanja i preuzimanja trgovačkih društava (M&A transakcije).
           </AccordionItem>
-          <AccordionItem
-            header="Spajanja i preuzimanja (M&A)"
-            itemKey="spajanja"
-          >
-            Pravni due diligence, izrada i revizija transakcijske dokumentacije,
-            strukturiranje transakcija i vođenje pregovora. Pravna podrška
-            tijekom cijelog procesa spajanja, preuzimanja i drugih akvizicija.
+          <AccordionItem header="Ugovorno pravo" itemKey="spajanja">
+            Bavim se izradom, analizom i revizijom širokog spektra ugovora –
+            kupoprodaja, najam, zakup, građenje, poslovna suradnja, raspodjela
+            imovine, uzdržavanje i dr.
           </AccordionItem>
 
-          <AccordionItem header="Ugovorno pravo" itemKey="ugovorno">
-            Izrada i revizija ugovora (kupoprodaja, najam, zakup, građenje,
-            zajam, raspodjela imovine, poslovna suradnja, distribucija, autorska
-            prava, uzdržavanje).
-          </AccordionItem>
           <AccordionItem
-            header="Sudski postupci i rješavanje sporova"
-            itemKey="sudski"
+            header="Nasljedno i obiteljsko pravo"
+            itemKey="ugovorno"
           >
-            Zastupanje u parničnim, upravnim, izvanparničnim, ovršnim i
-            arbitražnim postupcima. Vođenje pregovora i strategija za postizanje
-            nagodbi i efikasno rješavanje sporova.
+            Pružam pravnu podršku u uređenju imovinskopravnih odnosa između
+            bračnih drugova te pitanjima nasljeđivanja, uključujući zastupanje u
+            ostavinskim postupcima.
+          </AccordionItem>
+          <AccordionItem header="Radno pravo" itemKey="sudski">
+            Savjetujem poslodavce i radnike o pravima i obvezama iz radnog
+            odnosa, izrađujem internu radno-pravnu dokumentaciju te zastupam u
+            radnim sporovima.
           </AccordionItem>
 
           <AccordionItem header="Radno pravo" itemKey="radno">
@@ -86,39 +76,23 @@ export default function HomePage() {
             Zastupanje poslodavaca i radnika u radnim sporovima. Savjetovanje u
             vezi prava i obveza iz radnog odnosa.
           </AccordionItem>
+          <AccordionItem header="Rješavanje sporova" itemKey="nasljedno">
+            Zastupam klijente u postupcima pred sudovima i upravnim tijelima, s
+            naglaskom na trgovačke, imovinske i radne sporove te postupke
+            stečaja i restrukturiranja.
+          </AccordionItem>
+
           <AccordionItem
-            header="Nasljedno i obiteljsko pravo"
-            itemKey="nasljedno"
+            header="IT sektor, maloprodaja i GDPR"
+            itemKey="porezno"
           >
-            Zastupanje u ostavinskim postupcima, sporovima oko nasljeđivanja,
-            diobi bračne stečevine, postupcima razvoda i roditeljske skrbi.
-            Izrada oporuka, bračnih ugovora i sporazuma između nasljednika.
+            Savjetujem klijente u vezi s usklađenošću poslovanja s GDPR-om,
+            pravnim aspektima digitalnih usluga i e-trgovine.
           </AccordionItem>
 
-          <AccordionItem header="Porezno pravo" itemKey="porezno">
-            Strukturiranje transakcija s porezno-pravnog aspekta. Zastupanje u
-            poreznim postupcima i sporovima s poreznim tijelima.
-          </AccordionItem>
-
-          <AccordionItem header="Zaštita podataka (GDPR)" itemKey="gdpr">
-            Usklađivanje poslovanja s Općom uredbom o zaštiti podataka
-            (GDPR-om), izrada internih akata i ugovora. Pravna podrška u obradi
-            osobnih podataka, zastupanje pred nadzornim tijelima i procjena
-            usklađenosti.
-          </AccordionItem>
-
-          <AccordionItem header="Pravo osiguranja" itemKey="osiguranja">
-            Savjetovanje i podrška pri sklapanju ugovora o osiguranju.
-            Zastupanje u sporovima i reguliranje prava i obveza iz
-            osigurateljnih odnosa.
-          </AccordionItem>
-          <AccordionItem
-            header="Insolventnost, stečaj i restrukturiranje"
-            itemKey="insolventnost"
-          >
-            Naplata potraživanja, zastupanje vjerovnika i dužnika u
-            predstečajnim, stečajnim i likvidacijskim postupcima. Savjetovanje u
-            procesima restrukturiranja i sanacije poslovanja.
+          <AccordionItem header="Porezno pravo" itemKey="gdpr">
+            Pružam pravne savjete o poreznim aspektima poslovanja, imovine i
+            transakcija, te zastupam klijente pred poreznim tijelima.
           </AccordionItem>
         </Accordion>
       </MainWrapper>

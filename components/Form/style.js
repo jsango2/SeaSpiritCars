@@ -7,8 +7,8 @@ import styled from "styled-components";
 export const FormWrap = styled.form`
   position: relative;
   z-index: 1;
-  width: 467px;
-  height: 406px;
+  width: 487px;
+  height: 490px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -19,6 +19,7 @@ export const FormWrap = styled.form`
   padding: 28px;
   transition: opacity 1s ease-out;
   opacity: ${(props) => (props.inView === true ? "1" : "0")};
+  top: 0px;
   @media only screen and (max-width: 500px) {
     padding: 20px;
 
@@ -43,7 +44,7 @@ export const WrapText = styled.h1`
 `;
 export const WrapError = styled.div`
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   @media only screen and (max-width: 630px) {
@@ -124,7 +125,7 @@ export const FormTextarea = styled.textarea`
   outline: none; /* Remove outline on focus */
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
   display: flex;
-  min-height: 130px;
+  min-height: 100px;
 
   color: #929baf;
   font-family: Montserrat;
@@ -168,5 +169,64 @@ export const SubmitButton = styled.button`
   &:active {
     background-color: #d0d0d0; /* Even darker on active */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+`;
+
+// ... (your existing styled components)
+
+export const CheckboxContainer = styled.div`
+  display: flex;
+  align-items: flex-start; /* Align items to the top for multi-line text */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  label {
+    font-size: 14px;
+    color: #f0f0f0; // Or your desired text color
+    line-height: 1.4;
+    margin-left: 10px; /* Space between checkbox and text */
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 430px) {
+    label {
+      font-size: 13px;
+    }
+  }
+`;
+
+export const HiddenCheckboxInput = styled.input`
+  // Visually hide the checkbox but keep it accessible for screen readers
+  border: 0;
+  clip: rect(0 0 0 0);
+  clippath: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+`;
+
+export const CustomCheckbox = styled.div`
+  width: 20px;
+  height: 20px;
+  border: 2px solid ${(props) => (props.isChecked ? "#4CAF50" : "#ccc")}; /* Green when checked, grey when not */
+  background-color: ${(props) => (props.isChecked ? "#4CAF50" : "transparent")};
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevent it from shrinking */
+  transition: all 0.2s ease-in-out;
+
+  // SVG for the checkmark
+  svg {
+    color: white;
+    stroke-width: 3; // Make the checkmark bolder
+    transition: opacity 0.2s ease-in-out;
+    opacity: ${(props) => (props.isChecked ? "1" : "0")};
   }
 `;

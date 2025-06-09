@@ -15,6 +15,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { PiMapPinFill } from "react-icons/pi";
 import Image from "next/image.js";
 import LogoMiljak from "../../assets/images/logoMiljak.webp";
+import { FaWhatsapp } from "react-icons/fa";
 
 function FooterSection() {
   const size = useWindowSize();
@@ -35,20 +36,7 @@ function FooterSection() {
         </LogoWrap>
         <WrapData>
           <WrapSingleData>
-            <HiEnvelope color="white" />
-            <WrapKey>Email: &nbsp;</WrapKey>
-            <WrapValue>
-              <a
-                href="mailto:odvjetnik.miljak@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                odvjetnik.miljak@gmail.com
-              </a>
-            </WrapValue>
-          </WrapSingleData>
-          <WrapSingleData>
-            <BsFillTelephoneFill color="white" />
+            <FaWhatsapp color="white" />
 
             <WrapKey>Kontakt broj: &nbsp;</WrapKey>
             <WrapValue>
@@ -61,6 +49,19 @@ function FooterSection() {
               </a>
             </WrapValue>
           </WrapSingleData>{" "}
+          <WrapSingleData>
+            <HiEnvelope color="white" />
+            <WrapKey>Email: &nbsp;</WrapKey>
+            <WrapValue>
+              <a
+                href="mailto:odvjetnik.miljak@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                odvjetnik.miljak@gmail.com
+              </a>
+            </WrapValue>
+          </WrapSingleData>
           <WrapSingleData>
             <PiMapPinFill color="white" />
 
