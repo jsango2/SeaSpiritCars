@@ -184,7 +184,9 @@ export const CheckboxContainer = styled.div`
 
   label {
     font-size: 14px;
-    color: #f0f0f0; // Or your desired text color
+    color: ${(props) => (props.error === true ? "red" : "#f0f0f0")};
+
+    /* color: #f0f0f0; // Or your desired text color */
     line-height: 1.4;
     margin-left: 10px; /* Space between checkbox and text */
     cursor: pointer;

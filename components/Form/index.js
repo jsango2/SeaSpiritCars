@@ -334,7 +334,7 @@ function Form({ inView }) {
       clearTimeout(timer);
     };
   }, [errors]);
-
+  console.log(errors.checkbox);
   return (
     <>
       {/* Hidden Netlify form for bot detection and proper submission */}
@@ -384,7 +384,10 @@ function Form({ inView }) {
         ></FormTextarea>
 
         {/* NEW: Checkbox for consent */}
-        <CheckboxContainer onClick={handleCheckboxChange}>
+        <CheckboxContainer
+          onClick={handleCheckboxChange}
+          error={errors.checkbox != undefined}
+        >
           <HiddenCheckboxInput
             type="checkbox"
             id="consent-checkbox"
@@ -420,7 +423,7 @@ function Form({ inView }) {
           {errors.imePrezime && <p>{errors.imePrezime}</p>}
           {errors.email && <p>{errors.email}</p>}
           {errors.poruka && <p>{errors.poruka}</p>} {/* Corrected key */}
-          {errors.checkbox && <p>{errors.checkbox}</p>}{" "}
+          {/* {errors.checkbox && <p>{errors.checkbox}</p>}{" "} */}
           {/* Error message for checkbox */}
         </WrapError>
 
