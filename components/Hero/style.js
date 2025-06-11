@@ -67,10 +67,10 @@ export const WrapMiljak = styled.div`
   opacity: ${(props) => (props.inView === true ? "1" : "0")};
   @media only screen and (max-width: 770px) {
   }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 430px) {
     display: flex;
-    width: 100%;
-    height: 140vw;
+    width: 76%;
+    height: 88vw;
   }
 `;
 export const BottomGradient = styled.div`
