@@ -70,12 +70,6 @@ export default function HomePage() {
             odnosa, izrađujem internu radno-pravnu dokumentaciju te zastupam u
             radnim sporovima.
           </AccordionItem>
-
-          <AccordionItem header="Radno pravo" itemKey="radno">
-            Izrada ugovora o radu, pravilnika, odluka i internih akata.
-            Zastupanje poslodavaca i radnika u radnim sporovima. Savjetovanje u
-            vezi prava i obveza iz radnog odnosa.
-          </AccordionItem>
           <AccordionItem header="Rješavanje sporova" itemKey="nasljedno">
             Zastupam klijente u postupcima pred sudovima i upravnim tijelima, s
             naglaskom na trgovačke, imovinske i radne sporove te postupke
