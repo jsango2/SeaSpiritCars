@@ -19,23 +19,20 @@ export default function IndexPage() {
         />
         <meta property="og:title" content="Odvjetnik Dino Miljak" key="title" />
         <meta name="twitter:title" content="Odvjetnik Dino Miljak" />
-        {/* <link
-          rel="alternate"
-          hreflang={locale === "hr" ? "hr" : "en"}
-          href={locale === "hr" ? "https://www.perla.hr":"https://www.perla.hr/en"}
-          data-react-helmet="true"
-        ></link> */}
-        {/* <link
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://odvjetnik-miljak.hr" />
+        <link
           rel="canonical"
-          href={locale === "hr" ? "https://www.perla.hr":"https://www.perla.hr/en"}
+          href="https://odvjetnik-miljak.hr"
           data-react-helmet="true"
-        ></link> */}
+        ></link>
         <meta name="twitter:card" content="summary_large_image" />
-        {/* <meta property="og:url" content="https://www.runzadar.com" /> */}
-        {/* <meta
-          name="google-site-verification"
-          content="KSOsBchhDMtcxBavoVnUbAVI8Jxcipv9J5ceC1K4Rag"
-        /> */}
+        <meta name="author" content="Odvjetnik Dino Miljak" />
+        <meta
+          name="keywords"
+          content="odvjetnik, pravne usluge, Zadar, odvjetnik Dino Miljak, pravo, odvjetnički ured"
+        />
+
         <meta property="og:image" content="/ogImage.webp" />
         <meta
           name="description"
