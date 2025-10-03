@@ -13,6 +13,10 @@ export default function IndexPage() {
       <Meta />
       <Head>
         <title>Odvjetnik Dino Miljak</title>
+        <meta
+          name="google-site-verification"
+          content="dG2Ops7etE_w7uTnTCV_DHMA_aGieL1yacHfJksXD_Y"
+        />
         <meta property="og:title" content="Odvjetnik Dino Miljak" key="title" />
         <meta name="twitter:title" content="Odvjetnik Dino Miljak" />
         {/* <link
