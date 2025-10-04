@@ -16,8 +16,8 @@ export default function Meta() {
       <link rel="canonical" href="https://odvjetnik-miljak.hr" />
 
       {/* Icons */}
-      <link rel="icon" href="/svg/logoMiljak.svg" type="image/svg+xml" />
-      <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+      <link rel="icon" href="/favicon/favicon.png" type="image/png" />
+      <link rel="icon" href="/favicon/favicon.png" sizes="any" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
