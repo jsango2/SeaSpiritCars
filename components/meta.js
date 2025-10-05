@@ -2,6 +2,44 @@ import Head from "next/head";
 // import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
 
 export default function Meta() {
+  // pages/index.jsx
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: "Odvjetnik Dino Miljak",
+    url: "https://odvjetnik-miljak.hr",
+    logo: "https://odvjetnik-miljak.hr/ogImage.webp",
+    image: "https://odvjetnik-miljak.hr/ogImage.webp",
+    email: "odvjetnik.miljak@gmail.com", // plain email
+    telephone: "+385 99 592 9393", // your real E.164 phone
+    address: [
+      {
+        "@type": "PostalAddress",
+        streetAddress: "Supilova ulica 7",
+        addressLocality: "Zagreb",
+        postalCode: "10000",
+        addressCountry: "HR",
+      },
+      {
+        "@type": "PostalAddress",
+        streetAddress: "Ivana Meštrovića 77",
+        addressLocality: "Zadar",
+        postalCode: "23000",
+        addressCountry: "HR",
+      },
+    ],
+    areaServed: ["Zadar", "Zagreb", "Hrvatska"],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: "+385 99 592 9393",
+        email: "odvjetnik.miljak@gmail.com",
+        areaServed: "HR",
+      },
+    ],
+    // no "sameAs" needed
+  };
   return (
     <Head>
       {/* Basics (order matters) */}
@@ -71,6 +109,11 @@ export default function Meta() {
         content="dG2Ops7etE_w7uTnTCV_DHMA_aGieL1yacHfJksXD_Y"
       />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+      <script
+        type="application/ld+json"
+        // IMPORTANT: it must be a string
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </Head>
   );
 }
