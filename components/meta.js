@@ -108,7 +108,7 @@ export default function Meta() {
         name="google-site-verification"
         content="dG2Ops7etE_w7uTnTCV_DHMA_aGieL1yacHfJksXD_Y"
       />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+
       <script
         type="application/ld+json"
         // IMPORTANT: it must be a string
