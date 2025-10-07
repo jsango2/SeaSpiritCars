@@ -25,7 +25,7 @@ function HeaderComponent() {
   // });
   return (
     <WrapHeader>
-      <Container>
+      <Container data-nosnippet>
         <WrapSingleData>
           <FaWhatsapp color="white" />
 
