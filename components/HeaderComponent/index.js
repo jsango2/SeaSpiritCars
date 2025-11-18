@@ -72,13 +72,13 @@ function HeaderComponent() {
 
           <WrapKey>Pisarnica Zadar:&nbsp;</WrapKey>
           <WrapValue>
-            <a
+            {/* <a
               href="https://maps.app.goo.gl/PwaxLPDtYWrwnLYz5"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              Ivana Meštrovića 77, 23000 Zadar
-            </a>
+            > */}
+            Ivana Meštrovića 77, 23000 Zadar
+            {/* </a> */}
           </WrapValue>
         </WrapSingleData>
       </Container>
