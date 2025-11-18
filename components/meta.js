@@ -10,7 +10,7 @@ export default function Meta() {
     url: "https://odvjetnik-miljak.hr",
     logo: "https://odvjetnik-miljak.hr/ogImage.webp",
     image: "https://odvjetnik-miljak.hr/ogImage.webp",
-    email: "odvjetnik.miljak@gmail.com", // plain email
+    email: "dino@odvjetnik-miljak.hr", // plain email
     telephone: "+385 99 592 9393", // your real E.164 phone
     address: [
       {
@@ -34,7 +34,7 @@ export default function Meta() {
         "@type": "ContactPoint",
         contactType: "customer service",
         telephone: "+385 99 592 9393",
-        email: "odvjetnik.miljak@gmail.com",
+        email: "dino@odvjetnik-miljak.hr",
         areaServed: "HR",
       },
     ],

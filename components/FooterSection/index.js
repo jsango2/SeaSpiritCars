@@ -54,11 +54,11 @@ function FooterSection() {
             <WrapKey>Email: &nbsp;</WrapKey>
             <WrapValue>
               <a
-                href="mailto:odvjetnik.miljak@gmail.com"
+                href="mailto:dino@odvjetnik-miljak.hr"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                odvjetnik.miljak@gmail.com
+                dino@odvjetnik-miljak.hr
               </a>
             </WrapValue>
           </WrapSingleData>
@@ -67,13 +67,13 @@ function FooterSection() {
 
             <WrapKey>Adresa ureda: &nbsp;</WrapKey>
             <WrapValue>
-              <a
+              {/* <a
                 href="https://maps.app.goo.gl/5y9ThcJbyHULYiW37"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                Supilova ulica 7, 10000 Zagreb
-              </a>
+              > */}
+              Supilova ulica 7, 10000 Zagreb
+              {/* </a> */}
             </WrapValue>
           </WrapSingleData>{" "}
           <WrapSingleData>
@@ -81,13 +81,13 @@ function FooterSection() {
 
             <WrapKey>Pisarnica Zadar:&nbsp;</WrapKey>
             <WrapValue>
-              <a
+              {/* <a
                 href="https://maps.app.goo.gl/PwaxLPDtYWrwnLYz5"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                Ivana Meštrovića 77, 23000 Zadar
-              </a>
+              > */}
+              Ivana Meštrovića 77, 23000 Zadar
+              {/* </a> */}
             </WrapValue>
           </WrapSingleData>
         </WrapData>
