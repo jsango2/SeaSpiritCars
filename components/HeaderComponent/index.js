@@ -44,13 +44,13 @@ function HeaderComponent() {
           <HiEnvelope color="white" />
           <WrapKey>Email: &nbsp;</WrapKey>
           <WrapValue>
-            {/* <a
+            <a
               href="mailto:dino@odvjetnik-miljak.hr"
               target="_blank"
               rel="noopener noreferrer"
-            > */}
-            dino@odvjetnik-miljak.hr
-            {/* </a> */}
+            >
+              dino@odvjetnik-miljak.hr
+            </a>
           </WrapValue>
         </WrapSingleData>
         <WrapSingleData>
