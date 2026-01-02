@@ -4,22 +4,18 @@ export const WrapHeader = styled.div`
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 42px;
-  border: 1px solid #4c608f;
-  background: #151a28;
+  height: 100px;
+  background: #141414;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
+  overflow: hidden;
   @media only screen and (max-width: 1050px) {
-    height: auto;
-
-    padding: 10px;
   }
   @media only screen and (max-width: 385px) {
     padding: 0;
-    overflow: hidden;
   }
 `;
 
@@ -29,8 +25,10 @@ export const Container = styled.div`
   width: 1440px;
   height: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  padding: 0 30px;
+
   @media only screen and (max-width: 770px) {
     width: 100%;
     height: auto;
@@ -43,64 +41,63 @@ export const Container = styled.div`
     padding: 5px 0;
   }
 `;
-
-export const WrapSingleData = styled.div`
+export const WrapLogo = styled.div`
   position: relative;
   z-index: 10;
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 20px;
-  flex-shrink: 0;
-  @media only screen and (max-width: 1210px) {
-    margin: 0 10px;
-  }
-  @media only screen and (max-width: 1150px) {
-    svg {
-      display: none;
-    }
+  width: 224.055px;
+  height: 34.434px;
+  /* margin-right: auto; */
+  @media only screen and (max-width: 770px) {
   }
   @media only screen and (max-width: 1050px) {
-    svg {
-      display: block;
-    }
-    margin: 5px 20px;
-  }
-  @media only screen and (max-width: 360px) {
-    svg {
-      display: none;
-    }
+    margin: 0 auto;
   }
 `;
-export const WrapKey = styled.div`
+
+export const WrapLinks = styled.div`
   position: relative;
-  color: #fff;
-  font-family: Montserrat;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-left: 5px;
-  @media only screen and (max-width: 770px) {
-  }
-  @media only screen and (max-width: 574px) {
-  }
-`;
-export const WrapValue = styled.div`
-  position: relative;
-  color: #fff;
-  font-family: Montserrat;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  width: 550px;
+
   a {
     color: white;
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
   @media only screen and (max-width: 770px) {
   }
-  @media only screen and (max-width: 574px) {
+  @media only screen and (max-width: 1050px) {
+    display: none;
+  }
+`;
+export const WrapIcons = styled.div`
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  width: 130px;
+
+  @media only screen and (max-width: 770px) {
+  }
+  @media only screen and (max-width: 1050px) {
+    display: none;
+  }
+`;
+export const Icon1 = styled.a`
+  position: relative;
+  z-index: 10;
+  width: 35px;
+  height: 24.78px;
+
+  @media only screen and (max-width: 770px) {
+  }
+  @media only screen and (max-width: 1050px) {
   }
 `;

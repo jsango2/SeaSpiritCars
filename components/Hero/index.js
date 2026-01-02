@@ -1,22 +1,22 @@
 import React from "react";
 
 import {
+  Button,
   Container,
   HeroWrap,
-  BottomGradient,
-  WrapMiljak,
-  LogoWrap,
-  WrapText,
-  Gradient,
+  Line,
+  Text,
+  TextBox,
+  TextBoxMobile,
+  Title,
 } from "./style.js";
 import Image from "next/image";
 
 import useWindowSize from "../helper/usewindowsize.js";
 
 import { useInView } from "react-intersection-observer";
-import Miljak from "../../assets/images/miljakHero.webp";
-import LogoMiljak from "../../assets/images/logoMiljak.webp";
-import Form from "../Form/index.js";
+import Car from "../../assets/images/heroCar.webp";
+
 function Hero() {
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -27,33 +27,33 @@ function Hero() {
 
   return (
     <HeroWrap ref={ref}>
+      <TextBoxMobile>
+        <Title>VAŠ PRISTUP VRHUNSKOJ PONUDI VOZILA</Title>
+        <Line />
+        <Text>
+          Prodajemo samo provjerene automobile iz EU, s fokusom na kvalitetu i
+          transparentnost.
+        </Text>
+        <Button>POGLEDAJ PONUDU</Button>
+      </TextBoxMobile>
       <Container>
-        <LogoWrap inView={inView}>
-          <Image
-            src={LogoMiljak}
-            layout="fill"
-            objectFit="contain"
-            priority={true}
-            alt="Odvjetnik Dino Miljak"
-          />
-        </LogoWrap>
-        <WrapText inView={inView}>
-          Odvjetnik s više od 15 godina iskustva u pružanju pravnih usluga.
-          Individualan pristup i sveobuhvatna pravna podrška s ciljem
-          učinkovitih i pravno održivih rješenja.
-        </WrapText>
-        <WrapMiljak inView={inView}>
-          <Image
-            src={Miljak}
-            layout="fill"
-            objectFit="contain"
-            alt="Odvjetnik Dino Miljak"
-          />
-          <Gradient />
-        </WrapMiljak>
-        <Form inView={inView} />
+        <TextBox>
+          <Title>VAŠ PRISTUP VRHUNSKOJ PONUDI VOZILA</Title>
+          <Line />
+          <Text>
+            Prodajemo samo provjerene automobile iz EU, s fokusom na kvalitetu i
+            transparentnost.
+          </Text>
+          <Button
+            href="https://www.njuskalo.hr/trgovina/Seaspirit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            POGLEDAJ PONUDU
+          </Button>
+        </TextBox>
+        <Image src={Car} layout="fill" objectFit="cover" />
       </Container>
-      <BottomGradient />
     </HeroWrap>
   );
 }

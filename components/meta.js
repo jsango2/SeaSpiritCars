@@ -3,59 +3,20 @@ import Head from "next/head";
 
 export default function Meta() {
   // pages/index.jsx
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    name: "Odvjetnik Dino Miljak",
-    url: "https://odvjetnik-miljak.hr",
-    logo: "https://odvjetnik-miljak.hr/ogImage.webp",
-    image: "https://odvjetnik-miljak.hr/ogImage.webp",
-    email: "dino@odvjetnik-miljak.hr", // plain email
-    telephone: "+385 99 592 9393", // your real E.164 phone
-    address: [
-      {
-        "@type": "PostalAddress",
-        streetAddress: "Supilova ulica 7",
-        addressLocality: "Zagreb",
-        postalCode: "10000",
-        addressCountry: "HR",
-      },
-      {
-        "@type": "PostalAddress",
-        streetAddress: "Ivana Meštrovića 77",
-        addressLocality: "Zadar",
-        postalCode: "23000",
-        addressCountry: "HR",
-      },
-    ],
-    areaServed: ["Zadar", "Zagreb", "Hrvatska"],
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        contactType: "customer service",
-        telephone: "+385 99 592 9393",
-        email: "dino@odvjetnik-miljak.hr",
-        areaServed: "HR",
-      },
-    ],
-    // no "sameAs" needed
-  };
+
   return (
     <Head>
       {/* Basics (order matters) */}
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Odvjetnik Dino Miljak</title>
-      <meta
-        name="description"
-        content="Odvjetnik s više od 15 godina iskustva u pružanju pravnih usluga. Individualan pristup i sveobuhvatna pravna podrška s ciljem učinkovitih i pravno održivih rješenja."
-      />
+      <title>Sea Spirit Cars</title>
+      <meta name="description" content="Sea Spirit Cars, prodaja vozila" />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://odvjetnik-miljak.hr" />
+      <link rel="canonical" href="https://www.sea-spirit.hr" />
 
       {/* Icons */}
-      <link rel="icon" href="/favicon/favicon.png" type="image/png" />
-      <link rel="icon" href="/favicon/favicon.png" sizes="any" />
+      <link rel="icon" href="/iconSea.svg" type="image/png" />
+      <link rel="icon" href="/iconSea.svg" sizes="any" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -67,53 +28,50 @@ export default function Meta() {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
 
       {/* SEO extras */}
-      <meta name="author" content="Odvjetnik Dino Miljak" />
-      <meta
-        name="keywords"
-        content="odvjetnik, pravne usluge, Zadar, odvjetnik Dino Miljak, pravo, odvjetnički ured"
-      />
+      <meta name="author" content="Sea Spirit Cars" />
+      <meta name="keywords" content="Sea Spirit Cars, prodaja vozila" />
       <meta name="format-detection" content="telephone=no" />
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="hr_HR" />
-      <meta property="og:site_name" content="Odvjetnik Dino Miljak" />
-      <meta property="og:title" content="Odvjetnik Dino Miljak" />
+      <meta property="og:site_name" content="Sea Spirit Cars" />
+      <meta property="og:title" content="Sea Spirit Cars" />
       <meta
         property="og:description"
-        content="Odvjetnik s više od 15 godina iskustva u pružanju pravnih usluga. Individualan pristup i sveobuhvatna pravna podrška s ciljem učinkovitih i pravno održivih rješenja."
+        content="Sea Spirit Cars, prodaja vozila"
       />
-      <meta property="og:url" content="https://odvjetnik-miljak.hr" />
+      <meta property="og:url" content="https://www.sea-spirit.hr" />
       <meta
         property="og:image"
-        content="https://odvjetnik-miljak.hr/ogImage.webp"
+        content="https://www.sea-spirit.hr/ogImage.webp"
       />
       <meta property="og:image:type" content="image/webp" />
-      <meta property="og:image:alt" content="Odvjetnik Dino Miljak" />
+      <meta property="og:image:alt" content="Sea Spirit Cars" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Odvjetnik Dino Miljak" />
+      <meta name="twitter:title" content="Sea Spirit Cars" />
       <meta
         name="twitter:description"
-        content="Odvjetnik s više od 15 godina iskustva u pružanju pravnih usluga. Individualan pristup i sveobuhvatna pravna podrška s ciljem učinkovitih i pravno održivih rješenja."
+        content="Sea Spirit Cars, prodaja vozila"
       />
       <meta
         name="twitter:image"
-        content="https://odvjetnik-miljak.hr/ogImage.webp"
+        content="https://www.sea-spirit.hr/ogImage.webp"
       />
 
       {/* Verification & feeds */}
-      <meta
+      {/* <meta
         name="google-site-verification"
         content="dG2Ops7etE_w7uTnTCV_DHMA_aGieL1yacHfJksXD_Y"
-      />
+      /> */}
 
-      <script
+      {/* <script
         type="application/ld+json"
         // IMPORTANT: it must be a string
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      /> */}
     </Head>
   );
 }

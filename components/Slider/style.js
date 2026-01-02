@@ -15,9 +15,8 @@ export const HeroWrap = styled.div`
   background: #141414;
 
   @media only screen and (max-width: 1050px) {
-    height: 500px;
+    height: auto;
     padding: 40px 0 0 0;
-    overflow: hidden;
   }
 `;
 export const Container = styled.div`
@@ -25,23 +24,16 @@ export const Container = styled.div`
   z-index: 10;
   max-width: 1442px;
   width: 100%;
-  height: 579px;
-  aspect-ratio: 1442/579;
+  height: auto;
+  padding: 0px 0 20px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid #ffe4a3;
-
   @media only screen and (max-width: 1050px) {
     flex-direction: column;
-    height: auto;
   }
   @media only screen and (max-width: 500px) {
     width: 100%;
-    border-top: 1px solid #ffe4a3;
-    border-bottom: 1px solid #ffe4a3;
-    border-left: unset;
-    border-right: unset;
 
     padding: 0 20px 40px 20px;
   }
@@ -81,36 +73,16 @@ export const BottomGradient = styled.div`
   }
 `;
 export const TextBox = styled.div`
-  position: absolute;
+  position: relative;
   z-index: 20;
-  left: 82px;
-  width: 463px;
-  height: 255px;
+
+  width: 408px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   @media only screen and (max-width: 1050px) {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    left: 50%;
-    transform: translate(-50%);
-    max-width: 463px;
-    width: 90%;
-  }
-  @media only screen and (max-width: 574px) {
-  }
-`;
-export const TextBoxMobile = styled.div`
-  position: absolute;
-  z-index: 20;
-  display: none;
-  @media only screen and (max-width: 1050px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    left: 50%;
-    transform: translate(-50%);
-    max-width: 463px;
-    width: 90%;
-    top: 30px;
   }
   @media only screen and (max-width: 574px) {
   }
@@ -122,9 +94,8 @@ export const Title = styled.div`
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  text-align: center;
   @media only screen and (max-width: 1050px) {
-    text-align: center;
-    font-size: 24px;
   }
   @media only screen and (max-width: 574px) {
   }
@@ -146,14 +117,14 @@ export const Text = styled.div`
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  text-align: center;
+
   @media only screen and (max-width: 1050px) {
-    text-align: center;
-    font-size: 16px;
   }
   @media only screen and (max-width: 574px) {
   }
 `;
-export const Button = styled.a`
+export const Button = styled.div`
   width: 194px;
   height: 45px;
   border: 0.5px solid #ffe4a3;

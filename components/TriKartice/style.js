@@ -8,16 +8,16 @@ export const HeroWrap = styled.div`
   position: relative;
   z-index: 1;
   height: auto;
+  min-height: 1000px;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   background: #141414;
 
   @media only screen and (max-width: 1050px) {
-    height: 500px;
+    height: auto;
     padding: 40px 0 0 0;
-    overflow: hidden;
   }
 `;
 export const Container = styled.div`
@@ -25,25 +25,36 @@ export const Container = styled.div`
   z-index: 10;
   max-width: 1442px;
   width: 100%;
-  height: 579px;
-  aspect-ratio: 1442/579;
+  height: auto;
+  padding: 100px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  border: 1px solid #ffe4a3;
-
+  flex-direction: column;
   @media only screen and (max-width: 1050px) {
     flex-direction: column;
-    height: auto;
   }
   @media only screen and (max-width: 500px) {
     width: 100%;
-    border-top: 1px solid #ffe4a3;
-    border-bottom: 1px solid #ffe4a3;
-    border-left: unset;
-    border-right: unset;
 
-    padding: 0 20px 40px 20px;
+    padding: 0 0px 40px 0px;
+  }
+`;
+export const WrapCards = styled.div`
+  position: relative;
+  z-index: 10;
+  max-width: 1442px;
+  width: 100%;
+  height: auto;
+  padding: 0px 0 0px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+  }
+  @media only screen and (max-width: 500px) {
   }
 `;
 export const WrapText = styled.h1`
@@ -68,63 +79,88 @@ export const WrapText = styled.h1`
   }
 `;
 
-export const BottomGradient = styled.div`
-  position: absolute;
-  z-index: 11;
+export const Card = styled.div`
+  position: relative;
+  width: 308px;
+  height: 200px;
+  border-radius: 15px;
+  border: 0.5px solid #323232;
+  background: #141414;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.5);
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  @media only screen and (max-width: 1050px) {
+    margin-bottom: 20px;
+  }
+  @media only screen and (max-width: 574px) {
+  }
+`;
+export const Icon = styled.div`
+  position: relative;
+  width: 33px;
+  height: 23px;
+  @media only screen and (max-width: 1050px) {
+  }
+  @media only screen and (max-width: 574px) {
+  }
+`;
+export const BottomCar = styled.div`
+  position: relative;
   width: 100%;
-  height: 61px;
-  background: linear-gradient(180deg, rgba(23, 29, 43, 0) 0%, #171d2b 100%);
+  max-width: 1440px;
+  height: 630px;
+  aspect-ratio: 16/7;
+  margin-top: 200px;
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+  }
+  @media only screen and (max-width: 574px) {
+  }
+`;
+
+export const Overlay = styled.div`
+  position: absolute;
+  z-index: 12;
+  width: 100%;
+
+  height: 100%;
   bottom: 0;
-  @media only screen and (max-width: 770px) {
-  }
-  @media only screen and (max-width: 574px) {
-  }
-`;
-export const TextBox = styled.div`
-  position: absolute;
-  z-index: 20;
-  left: 82px;
-  width: 463px;
-  height: 255px;
+  background: linear-gradient(180deg, #141414 0%, rgba(20, 20, 20, 0.5) 100%);
   @media only screen and (max-width: 1050px) {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    left: 50%;
-    transform: translate(-50%);
-    max-width: 463px;
-    width: 90%;
-  }
-  @media only screen and (max-width: 574px) {
-  }
-`;
-export const TextBoxMobile = styled.div`
-  position: absolute;
-  z-index: 20;
-  display: none;
-  @media only screen and (max-width: 1050px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    left: 50%;
-    transform: translate(-50%);
-    max-width: 463px;
-    width: 90%;
-    top: 30px;
   }
   @media only screen and (max-width: 574px) {
   }
 `;
 export const Title = styled.div`
+  position: relative;
+  z-index: 20;
   color: #fff;
+  text-align: center;
   font-family: Inter;
-  font-size: 36px;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   line-height: normal;
+  margin: 12px 0;
   @media only screen and (max-width: 1050px) {
-    text-align: center;
+  }
+  @media only screen and (max-width: 574px) {
+  }
+`;
+export const Title2 = styled(Title)`
+  position: relative;
+  z-index: 20;
+
+  font-size: 60px;
+  font-weight: 300;
+  top: -50px;
+
+  @media only screen and (max-width: 1050px) {
     font-size: 24px;
+    top: -100px;
   }
   @media only screen and (max-width: 574px) {
   }
@@ -141,27 +177,29 @@ export const Line = styled.div`
 `;
 export const Text = styled.div`
   color: #fff;
+  text-align: center;
   font-family: Inter;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+
   @media only screen and (max-width: 1050px) {
-    text-align: center;
-    font-size: 16px;
   }
   @media only screen and (max-width: 574px) {
   }
 `;
 export const Button = styled.a`
-  width: 194px;
-  height: 45px;
+  position: relative;
+  z-index: 20;
+  width: 358px;
+  height: 83px;
   border: 0.5px solid #ffe4a3;
   background: rgba(0, 0, 0, 0.35);
   color: #fff;
   text-align: center;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -169,8 +207,13 @@ export const Button = styled.a`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin-top: 40px;
+  margin: 40px auto 0 auto;
+  top: -50px;
   @media only screen and (max-width: 1050px) {
+    width: 194px;
+    height: 45px;
+    font-size: 16px;
+    top: -100px;
   }
   @media only screen and (max-width: 574px) {
   }

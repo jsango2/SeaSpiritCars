@@ -1,11 +1,12 @@
 import HeaderComponent from "../components/HeaderComponent";
 import Hero from "../components/Hero";
 import Head from "next/head";
-import PodrucjeRadaSection from "../components/PodrucjeRadaSection";
-import TimelineSection from "../components/TimelineSection";
-import Proces from "../components/Proces";
+
 import Meta from "../components/meta";
-import FooterSection from "../components/FooterSection";
+import Ponuda from "../components/Ponuda";
+import Slider from "../components/Slider";
+import TriKartice from "../components/TriKartice";
+import Footer from "../components/Footer";
 
 export default function IndexPage() {
   return (
@@ -14,10 +15,10 @@ export default function IndexPage() {
 
       <HeaderComponent />
       <Hero />
-      <PodrucjeRadaSection />
-      <TimelineSection />
-      <Proces />
-      <FooterSection />
+      <Ponuda />
+      <Slider />
+      <TriKartice />
+      <Footer />
     </>
   );
 }

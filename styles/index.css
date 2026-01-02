@@ -13,12 +13,12 @@
   padding: 0;
 }
 html {
-  background: #1f273b;
+  background: #141414;
 }
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  background: #1f273b;
+  background: #141414;
 
   line-height: 1.5;
   -webkit-font-smoothing: antialiased; /* Better font rendering on macOS/iOS */
