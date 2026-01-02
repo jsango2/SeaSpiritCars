@@ -14,7 +14,7 @@ import Image from "next/image";
 import useWindowSize from "../helper/usewindowsize.js";
 
 import { useInView } from "react-intersection-observer";
-import PhotoScrollGallery from "./photoScrollGallery.js";
+import PhotoScrollGallery from "./PhotoScrollGallery.js";
 
 function Slider() {
   const { ref, inView, entry } = useInView({
