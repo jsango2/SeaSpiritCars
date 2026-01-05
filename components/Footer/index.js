@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 import { Container, HeroWrap } from "./style.js";
 import Image from "next/image";
@@ -9,21 +9,16 @@ import { useInView } from "react-intersection-observer";
 import Car from "../../assets/images/heroCar.webp";
 import FooterContactInner from "./footerContact.js";
 
-function Footer() {
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0.2,
-    triggerOnce: true,
-  });
+const Footer = forwardRef(function Footer(props, ref) {
   const size = useWindowSize();
 
   return (
-    <HeroWrap ref={ref}>
+    <HeroWrap ref={ref} id="footer">
       <Container>
         <FooterContactInner />
       </Container>
     </HeroWrap>
   );
-}
+});
 
 export default Footer;

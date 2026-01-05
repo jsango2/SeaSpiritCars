@@ -58,7 +58,7 @@ export const WrapLinks = styled.div`
   position: relative;
   z-index: 10;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 550px;
 
   a {
@@ -70,6 +70,7 @@ export const WrapLinks = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin: 0 14px;
   }
   @media only screen and (max-width: 770px) {
   }
@@ -90,7 +91,25 @@ export const WrapIcons = styled.div`
     display: none;
   }
 `;
-export const Icon1 = styled.a`
+export const LinkBtn = styled.div`
+  position: relative;
+  color: white;
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 14px;
+  cursor: pointer;
+  @media only screen and (max-width: 770px) {
+  }
+  @media only screen and (max-width: 1050px) {
+    display: none;
+  }
+`;
+export const Icon1 = styled.div`
   position: relative;
   z-index: 10;
   width: 35px;

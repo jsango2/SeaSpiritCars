@@ -113,8 +113,8 @@ export default function PhotoScrollGallery({ photos = [] }) {
       if (!isMobile) e.preventDefault();
     };
 
-    el.addEventListener("scroll", onScroll, { passive: true });
-    el.addEventListener("wheel", onWheel, { passive: false });
+    // el.addEventListener("scroll", onScroll, { passive: true });
+    // el.addEventListener("wheel", onWheel, { passive: false });
 
     let ro;
     if (typeof ResizeObserver !== "undefined") {
@@ -186,6 +186,7 @@ export default function PhotoScrollGallery({ photos = [] }) {
                     alt={p.alt}
                     layout="fill"
                     objectFit="cover"
+                    priority
                   />
                 </Tile>
               ))}

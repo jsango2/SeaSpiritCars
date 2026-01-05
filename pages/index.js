@@ -7,18 +7,31 @@ import Ponuda from "../components/Ponuda";
 import Slider from "../components/Slider";
 import TriKartice from "../components/TriKartice";
 import Footer from "../components/Footer";
+import { useRef } from "react";
 
 export default function IndexPage() {
+  const footerRef = useRef(null);
+  const ponudaRef = useRef(null);
+
+  const scrollToFooter = () => {
+    footerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const scrollToPonuda = () => {
+    ponudaRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
   return (
     <>
       <Meta />
 
-      <HeaderComponent />
+      <HeaderComponent
+        onContactClick={scrollToFooter}
+        onPonudaClick={scrollToPonuda}
+      />
       <Hero />
-      <Ponuda />
+      <Ponuda ref={ponudaRef} />
       <Slider />
       <TriKartice />
-      <Footer />
+      <Footer ref={footerRef} />
     </>
   );
 }

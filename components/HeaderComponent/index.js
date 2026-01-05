@@ -5,6 +5,7 @@ import {
   WrapLinks,
   WrapIcons,
   Icon1,
+  LinkBtn,
 } from "./style.js";
 
 import useWindowSize from "../helper/usewindowsize.js";
@@ -14,7 +15,7 @@ import Link from "next/link.js";
 import Image from "next/image.js";
 import { HiEnvelope } from "react-icons/hi2";
 
-function HeaderComponent() {
+function HeaderComponent({ onContactClick, onPonudaClick }) {
   const size = useWindowSize();
   // const { ref, inView, entry } = useInView({
 
@@ -32,10 +33,9 @@ function HeaderComponent() {
           />
         </WrapLogo>
         <WrapLinks>
-          <Link href="#section">Naslovnica</Link>
-          <Link href="#section">Ponuda vozila</Link>
-          <Link href="#section">O nama</Link>
-          <Link href="#section">Kontakt</Link>
+          <LinkBtn onClick={onPonudaClick}>Ponuda vozila</LinkBtn>
+          <LinkBtn onClick={onContactClick}>O nama</LinkBtn>
+          {/* <Link href="#section">Kontakt</Link> */}
         </WrapLinks>
         <WrapIcons>
           <Icon1 href="#section">

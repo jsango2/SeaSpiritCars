@@ -14,7 +14,9 @@
 }
 html {
   background: #141414;
+  scroll-behavior: smooth;
 }
+
 /* Set core body defaults */
 body {
   min-height: 100vh;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 import {
   Button,
@@ -16,12 +16,7 @@ import useWindowSize from "../helper/usewindowsize.js";
 import { useInView } from "react-intersection-observer";
 import Car from "../../assets/images/heroCar.webp";
 
-function Ponuda() {
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0.2,
-    triggerOnce: true,
-  });
+const Ponuda = forwardRef(function Ponuda(props, ref) {
   const size = useWindowSize();
 
   return (
@@ -38,6 +33,6 @@ function Ponuda() {
       </Container>
     </HeroWrap>
   );
-}
+});
 
 export default Ponuda;
