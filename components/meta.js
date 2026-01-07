@@ -42,10 +42,7 @@ export default function Meta() {
         content="Sea Spirit Cars, prodaja vozila"
       />
       <meta property="og:url" content="https://www.sea-spirit.hr" />
-      <meta
-        property="og:image"
-        content="https://www.sea-spirit.hr/ogImage.webp"
-      />
+      <meta property="og:image" content="/ogImage.webp" />
       <meta property="og:image:type" content="image/webp" />
       <meta property="og:image:alt" content="Sea Spirit Cars" />
 
@@ -56,10 +53,7 @@ export default function Meta() {
         name="twitter:description"
         content="Sea Spirit Cars, prodaja vozila"
       />
-      <meta
-        name="twitter:image"
-        content="https://www.sea-spirit.hr/ogImage.webp"
-      />
+      <meta name="twitter:image" content="/ogImage.webp" />
 
       {/* Verification & feeds */}
       {/* <meta
