@@ -42,8 +42,8 @@ function TriKartice() {
     },
     {
       icon: "/svg/iskustvo.svg",
-      title: "30 godina iskustva",
-      text: "Dugogodišnje iskustvo u automobilskom sektoru jamči sigurnu, profesionalnu i pouzdanu kupnju.",
+      title: "5+ godina iskustva",
+      text: "Višegodišnje iskustvo u automobilskom sektoru jamči sigurnu, profesionalnu i pouzdanu kupnju.",
     },
   ];
 
